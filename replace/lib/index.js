@@ -64,6 +64,34 @@ async function replaceSingleMarkdown(params) {
         }
         resolve(files)
       }
-    });
-  });
+    })
+  })
+}
+
+
+
+function checkProject() {
+  const pkgPath = path.resolve(process.cwd(), 'package.json')
+  const src = path.resolve(process.cwd(), 'docs')
+  if (fs.existsSync(pkgPath) && fs.existsSync(src)) {
+    const pkg = require(pkgPath)
+    if (pkg.name === 'students-learn-task') {
+      return true
+    }
+  }
+  return false
+}
+
+async function lookAtImages() {
+  return new Promise((resolve, reject) => {
+    glob('docs/**/images', {
+      cwd: process.cwd(),
+    }, function(err, files) {
+      if (err) {
+        reject(err)
+      } else {
+        resolve(files)
+      }
+    })
+  })
 }
