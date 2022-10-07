@@ -69,19 +69,6 @@ async function replaceSingleMarkdown(params) {
 }
 
 
-
-function checkProject() {
-  const pkgPath = path.resolve(process.cwd(), 'package.json')
-  const src = path.resolve(process.cwd(), 'docs')
-  if (fs.existsSync(pkgPath) && fs.existsSync(src)) {
-    const pkg = require(pkgPath)
-    if (pkg.name === 'students-learn-task') {
-      return true
-    }
-  }
-  return false
-}
-
 async function lookAtImages() {
   return new Promise((resolve, reject) => {
     glob('docs/**/images', {
