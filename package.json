@@ -1,0 +1,22 @@
+{
+  "name": "g-kit-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "kit": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garfieldkit/kit-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garfieldkit/kit-cli/issues"
+  },
+  "homepage": "https://github.com/garfieldkit/kit-cli#readme"
+}

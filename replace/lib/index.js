@@ -25,8 +25,6 @@ function removeImage(imageObj) {
   })
 }
 
-
-
 async function replaceMarkdown(imageObj) {
   const keys = Object.keys(imageObj)
   for (const file of keys) {
